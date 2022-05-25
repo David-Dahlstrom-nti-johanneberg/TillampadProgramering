@@ -80,7 +80,7 @@ void loop(void) {
   rtcUpdate();
   
   //run motionsensorfunction
-  motionsensor();
+ // motionsensor();
 
   // Refresh picture
   oled.firstPage();
@@ -132,12 +132,12 @@ void movestepper(void) {
 }
 
 //motionsensor function, if the sensor sends a signal and its been 30s since last signal increase the counter by 1
-void motionsensor(void) {
-  if (digitalRead(1) == HIGH && (millis() - timestamp) > 30000) {
-    motionSensorCount += 1;
-    timestamp = millis();
-  }
-}
+//void motionsensor(void) {
+//  if (digitalRead(1) == HIGH && (millis() - timestamp) > 30000) {
+//    motionSensorCount += 1;
+//    timestamp = millis();
+//  }
+//}
 
 //function to input time into the time variables, after inputing a 2 digit number press a corresponding key to set it to a variable
 void keypadinput(void) {
